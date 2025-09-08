@@ -442,11 +442,48 @@ const posts = [
     console.log('Kristín Bára website initialized successfully');
   }
   
+  // Mobile menu functionality
+  function initMobileMenu() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('#mobile-nav');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-list a');
+    
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+        document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+      });
+      
+      // Close mobile menu when clicking on links
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileToggle.classList.remove('active');
+          mobileNav.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileNav.contains(e.target) && !mobileToggle.contains(e.target)) {
+          mobileToggle.classList.remove('active');
+          mobileNav.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+  }
+  
   // ===== START APPLICATION =====
   
   // Wait for DOM to be fully loaded
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', () => {
+      init();
+      initMobileMenu();
+    });
   } else {
     init();
+    initMobileMenu();
   }
