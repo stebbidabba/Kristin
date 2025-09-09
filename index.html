@@ -15,13 +15,22 @@
     <link rel="stylesheet" href="fonts/fonts.css">
     -->
     
-    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="style.css?v=4">
+    <style>
+@media (min-width: 769px){
+  .header .header-content{display:flex!important;justify-content:space-between!important;align-items:center!important}
+  .header .nav{display:block!important}
+  .header .nav-list{display:flex!important;list-style:none!important;margin:0!important;padding:0!important;gap:2rem!important;align-items:center!important}
+  .header .nav-list li{margin:0!important}
+  .header .nav-link{color:rgba(255,255,255,0.92)!important;text-decoration:none!important;font-weight:500!important}
+}
+</style>
 </head>
 <body>
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
-            <div class="header-content">
+            <div class="header-content" style="display:flex;justify-content:space-between;align-items:center;">
                 <div class="logo">
                     <a href="#" class="logo-link"><img src="logo.png" alt="Kristín Bára" class="logo-img"><span class="sr-only">Kristín Bára</span></a>
                 </div>
@@ -36,27 +45,9 @@
                         <li><a href="#skraning" class="cta-button">Skráning</a></li>
                     </ul>
                 </nav>
-                <button class="mobile-menu-toggle" aria-label="Opna valmynd">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
         </div>
     </header>
-
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobile-nav">
-        <ul class="mobile-nav-list">
-            <li><a href="#yoga-nidra">Inngangur</a></li>
-            <li><a href="#um-kristinu">Um Kristínu</a></li>
-            <li><a href="#yoga-nidra-program">Yoga Nidra</a></li>
-            <li><a href="#samtalsmedferd">Samtalsmeðferð</a></li>
-            <li><a href="#timar">Tímar</a></li>
-            <li><a href="#efni">Efni</a></li>
-            <li><a href="#skraning">Skráning</a></li>
-        </ul>
-    </nav>
 
     <main>
         <!-- Hero Section -->
@@ -90,11 +81,11 @@
                 </div>
                 
                 <div class="benefits-card" data-reveal="right">
-                    <h3>Það sem ég kenni</h3>
+                    <h3>Það sem þú lærir</h3>
                     <ul class="benefits-list">
                         <li>Endurheimt & djúpslökun</li>
                         <li>Áreynslulaus streitulosun</li>
-                        <li>Bættur svefn</li>
+                        <li>Betri svefn</li>
                         <li>Stuðningur við kvíða/þunglyndi</li>
                         <li>Bati eftir áföll og fíknihegðun</li>
                     </ul>
