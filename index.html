@@ -40,6 +40,8 @@
                         <li><a href="#um-kristinu" class="nav-link">Um Kristínu</a></li>
                         <li><a href="#yoga-nidra-program" class="nav-link">Yoga Nidra</a></li>
                         <li><a href="#samtalsmedferd" class="nav-link">Samtalsmeðferð</a></li>
+                        <li><a href="#compassionate-inquiry" class="nav-link">Compassionate Inquiry</a></li>
+                        <li><a href="#tonheilun" class="nav-link">Tónheilun</a></li>
                         <li><a href="#timar" class="nav-link">Tímar</a></li>
                         <li><a href="#efni" class="nav-link">Efni</a></li>
                         <li><a href="#skraning" class="cta-button">Skráning</a></li>
@@ -59,18 +61,41 @@
                     <h1 class="hero-title">Djúp Kyrrð.<br>Vöknuð vitund.</h1>
                     <p class="hero-subtitle">Leidd Yoga Nidra, hugleiðsla og tónheilun með Kristínu Báru.</p>
                     <p class="hero-microcopy">Vikulegir tímar í Yoga Shala & í Sólum.</p>
-                    <div class="hero-actions">
-                        <a href="#yoga-nidra" class="btn btn-secondary">Læra meira</a>
-                    </div>
+                    
                 </div>
             </div>
             
         </section>
 
         
+        <!-- Newsletter Band -->
+        <section class="newsletter-band section" id="newsletter-band" data-reveal>
+            <div class="band-overlay"></div>
+            <div class="container">
+                <h2 class="band-title">Gerstu áskrifandi að póstlista</h2>
+                <p class="band-subtitle">Skráðu netfangið þitt til að fá róandi fréttir og uppfærslur.</p>
+                <form id="band-newsletter-form" class="band-form" aria-label="Póstlisti">
+                    <input type="text" id="band-first" name="first" placeholder="Fornafn" class="band-input" required>
+                    <input type="text" id="band-last" name="last" placeholder="Eftirnafn" class="band-input">
+                    <input type="email" id="band-email" name="email" placeholder="Netfang" class="band-input" required>
+                    <button type="submit" class="btn btn-secondary band-btn">Skrá</button>
+                </form>
+                <p class="band-privacy">Við virðum þinn frið og notum eingöngu netfangið til að senda uppfærslur.</p>
+            </div>
+        </section>
+
+        
 
         <!-- Hvað er Yoga Nidra? -->
         <section class="section" id="yoga-nidra" data-reveal>
+            <!-- Border corners -->
+            <div class="border-corner border-top-left">
+                <img src="border.png" alt="Border decoration" class="border-img">
+            </div>
+            <div class="border-corner border-top-right">
+                <img src="border.png" alt="Border decoration" class="border-img">
+            </div>
+            
             <div class="container" data-reveal-container>
                 <div class="section-header" data-reveal="left">
                     <h2 class="section-title callout">Verið hjartanlega velkomin</h2>
@@ -78,6 +103,12 @@
                 <div class="prose" data-reveal>
                     <p>Hér finnur þú rými fyrir kyrrð, nærveru og endurnærandi hvíld. Á síðunni getur þú lesið um aðferðafræði og ávinning Yoga Nidra, kynnast Kristínu og nálgun hennar, skoðað samtalsmeðferð og hvaða tímar eru í boði. Í efni deili ég hugleiðingum og leiðbeiningum, og í skráningu getur þú skráð þig.</p>
                     <p>Hvort sem þú leitar að betri svefni, dýpri ró eða mýkri tengingu við líkama og hjarta, þá er þú velkomin(n) að staldra við — og byrja þar sem þú ert.</p>
+                </div>
+                
+                <!-- Corner photos with quarter-circle cutouts -->
+                <div class="welcome-corner-photos" data-reveal>
+                    <img src="photo1.png" alt="Kyrrð og nærvera" class="welcome-corner-photo bottom-left">
+                    <img src="photo5.png" alt="Mjúk nærfærni" class="welcome-corner-photo bottom-right">
                 </div>
                 
                 <div class="benefits-card" data-reveal="right">
@@ -99,13 +130,9 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Um Kristínu</h2>
+                    <p class="about-script">Nærandi kyrrð</p>
                 </div>
-                <div class="about-image-container" data-reveal>
-                    <div class="about-image-wrapper">
-                        <img src="about.jpg" alt="Kristín Bára" class="about-image">
-                        <div class="image-border-decoration"></div>
-                    </div>
-                </div>
+                
                 <div class="content-grid" data-reveal-container>
                     <div class="prose">
                         <p>Ég hef lengi átt mér á mér þann draum að sem flestir fái tækifæri til þess að upplifa töfra Yoga Nidra. Ég hef því stofnað vettvang þar sem við getum iðkað saman reglulega.</p>
@@ -124,6 +151,21 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- About feature block (inspired layout) -->
+                <div class="about-feature" data-reveal>
+                    <div class="about-feature-text">
+                        <h3 class="about-feature-title">Vinna með Kristínu</h3>
+                        <p class="about-feature-sub">Kristín, þakka þér fyrir nærveru þína og allt sem þú deilir.</p>
+                        <div class="about-divider"></div>
+                        <p>Margir lýsa því að upplifa ljós og léttleika í starfi með Kristínu. Nálgunin er hlý, jarðtengd og byggir á djúpri virðingu fyrir líkama, huga og hjarta. Hér fær taugakerfið að mýkjast, andardrátturinn að róast og tenging við sjálfið að dýpka.</p>
+                        <p class="about-signature">— með kærleik</p>
+                    </div>
+                    <div class="about-feature-gallery">
+                        <img src="about.jpg" alt="Kristín Bára" class="about-feature-img primary">
+                        <img src="photo4.png" alt="Kristín Bára" class="about-feature-img secondary">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -135,13 +177,22 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Yoga Nidra</h2>
-                    <p class="section-subtitle">Djúpslökun og endurheimt fyrir líkama og sál</p>
+                    <p class="section-subtitle script-accent">Djúpslökun og endurheimt fyrir líkama og sál</p>
                 </div>
                 <div class="content-grid">
                     <div class="prose">
                         <p>Iðkendur eru markvisst leiddir inn í bilið á milli svefns & vöku. Þar á sér stað endurheimt, áreynslulaus streitulosun & djúpslökun. Skaðleg mynstur leysast upp & ákveðin endurforritun á sér stað.</p>
                         <p>Yoga Nidra er áhrifarík leið til að takast á við algeng streitutengd heilsufarsvandamál og skaðleg hegðunarmynstur. Til að létta á streitu & kulnun, vinna á kvíða- og þunglyndiseinkennum & bæta svefngæði. Yoga Nidra er einnig leið til bata eftir áföll, áfallastreituröskun og fíknihegðun svo eitthvað sé nefnt.</p>
                         <p>Yoga Nidra gerir okkur kleift að hvílast og dvelja meira í rýminu handan hugans. Við höfum tilhneigingu til þess að gleyma því að staldra við í amstri dagsins & það hefur aldrei verið jafn mikilvægt að hægja á eins og núna.</p>
+                        <div class="nidra-card" data-reveal>
+                            <h3 class="nidra-card-title">Hvað er Yoga Nidra?</h3>
+                            <ul class="nidra-points">
+                                <li><strong>Djúp slökun í hvíld:</strong> Yoga Nidra er liggjandi leidd hugleiðsla og djúpslökun.</li>
+                                <li><strong>Jógískur svefn:</strong> 45 mínútur af Nidra jafnast á við um það bil 3 tíma svefn.</li>
+                                <li><strong>Róandi taugakerfi:</strong> Við virkjum parasympatíska (slakandi) hluta taugakerfisins & æfum okkur í að finna & vera.</li>
+                            </ul>
+                            <p class="nidra-note">This ancient technology is now backed by neuroscience and provides proven benefits including dopamine release, increased focus, improved learning & memory, greater sleep quality and anxiety management.</p>
+                        </div>
                         <div class="action-buttons">
                             <a href="mailto:bryndisardottir@gmail.com?subject=Skr%C3%A1ning%20%C3%AD%20Yoga%20Nidra" class="btn btn-primary">Skrá mig í Yoga Nidra</a>
                         </div>
@@ -165,6 +216,9 @@
                                 <h4>Fyrir hvern</h4>
                                 <p>Allir geta iðkað</p>
                             </div>
+                        </div>
+                        <div class="program-illustration">
+                            <img src="photo3.png" alt="Yoga Nidra" class="program-illustration-img">
                         </div>
                     </div>
                 </div>
@@ -201,6 +255,78 @@
             </div>
         </section>
 
+        <!-- Tónheilun -->
+        <section class="section section-accent" id="tonheilun" data-reveal>
+            <div class="enso-bg-left">
+                <img src="bavk.png" alt="Enso circle" class="enso-bg-image">
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tónheilun</h2>
+                    <p class="section-subtitle script-accent">Hljóðbylgjur & tíðni til kyrrðar, jafnvægis og vellíðunar</p>
+                </div>
+                <div class="content-grid">
+                    <div class="prose">
+                        <p>Tónheilun nýtir hljóð og tíðni til að styðja líkamann í að losa spennu, mýkja taugakerfið og efla dýpri kyrrð. Með skálum, gongum, rödd og öðrum hljóðfærum er búið til mjúkt rými sem hjálpar líkamanum að snúa í parasympatískt ástand.</p>
+                        <p>Hljóðbylgjur geta hjálpað til við svefn, streitulosun og einbeitingu. Markmiðið er að skapa öruggt rými þar sem þú getur slakað á og endurnýjað orkuna.</p>
+                        <div class="action-buttons" style="margin-top:1rem">
+                            <a href="mailto:bryndisardottir@gmail.com?subject=Skr%C3%A1ning%20%C3%AD%20T%C3%B3nheilun" class="btn btn-secondary">Skrá mig</a>
+                        </div>
+                    </div>
+                    <div class="program-details">
+                        <h3>Upplýsingar</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <h4>Lengd</h4>
+                                <p>45-60 mínútur</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>Staðsetning</h4>
+                                <p>Yoga Shala & í Sólum</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>Fyrir hvern</h4>
+                                <p>Allir geta notið</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compassionate Inquiry -->
+        <section class="section" id="compassionate-inquiry" data-reveal>
+            <div class="enso-bg-right">
+                <img src="bavk.png" alt="Enso circle" class="enso-bg-image">
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Compassionate Inquiry</h2>
+                    <p class="section-subtitle">Nálgun Gabor Maté — nærfærni, forvitni og heiðarleiki</p>
+                </div>
+                <div class="content-grid">
+                    <div class="prose">
+                        <blockquote class="ci-quote">The goal of Compassionate Inquiry is to help people connect with themselves in the present moment and not be dominated by the past. We all have the truth inside ourselves and with the right approach, guidance and the appropriate questions, that truth is available to us. And in that truth is our liberation.</blockquote>
+                        <p>Our primary suffering is rooted from disconnection from ourselves. And that disconnection originally had a purpose to protect ourselves from emotions and mental states as children we simply couldn’t handle. In that disconnection, there was a protective element carried on over a long time, that same disconnection, causes problems physically, mentally, relationally and socially.</p>
+                        <p>When it comes to addressing human health, you can’t separate the mind from the body. You can’t separate the individual from their social relationships, and you can’t separate any of that from the culture. We are what has been called biopsychosocial creatures, and we cannot understand ourselves without looking at the whole picture.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Hvað felst í CI?</h3>
+                        <ul class="info-list">
+                            <li><strong>Speglun & forvitni:</strong> horft er með mýkt og nákvæmni á það sem er lifandi núna.</li>
+                            <li><strong>Unnið með líkama & taugakerfi:</strong> það sem býr í líkamanum fær pláss og skilning.</li>
+                            <li><strong>Aflvopnun goðsagna:</strong> CI býður að líta á ómeðvitaðar sögur og uppruna þeirra.</li>
+                            <li><strong>Frelsi & val:</strong> þegar við þekkjum mynstrin getum við valið nýja leið — í átt að léttleika.</li>
+                        </ul>
+                        <p class="ci-note">Once we recognise beliefs and their origins in childhood — and how they’re ingrained in the body and nervous system — við getum byrjað að sleppa tökunum og lifa frjálsari lífi.</p>
+                        <div class="action-buttons">
+                            <a href="mailto:bryndisardottir@gmail.com?subject=Spurningar%20um%20Compassionate%20Inquiry" class="btn btn-secondary">Hafa samband</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Tímar -->
         <section class="section section-accent" id="timar" data-reveal>
             <div class="enso-bg-left">
@@ -209,7 +335,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Tímar</h2>
-                    <p class="section-subtitle">Vikulegir tímar í Yoga Shala & í Sólum.</p>
+                    <p class="section-subtitle script-accent">Vikulegir tímar í Yoga Shala & í Sólum.</p>
                 </div>
                 <div class="services-grid">
                     <div class="service-card">
@@ -234,6 +360,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Band -->
+        <section class="newsletter-band section" id="newsletter-band" data-reveal>
+            <div class="band-overlay"></div>
+            <div class="container">
+                <h2 class="band-title">Gerstu áskrifandi að póstlista</h2>
+                <p class="band-subtitle">Skráðu netfangið þitt til að fá róandi fréttir og uppfærslur.</p>
+                <form id="band-newsletter-form" class="band-form" aria-label="Póstlisti">
+                    <input type="text" id="band-first" name="first" placeholder="Fornafn" class="band-input" required>
+                    <input type="text" id="band-last" name="last" placeholder="Eftirnafn" class="band-input">
+                    <input type="email" id="band-email" name="email" placeholder="Netfang" class="band-input" required>
+                    <button type="submit" class="btn btn-secondary band-btn">Skrá</button>
+                </form>
+                <p class="band-privacy">Við virðum þinn frið og notum eingöngu netfangið til að senda uppfærslur.</p>
             </div>
         </section>
 
@@ -301,7 +443,7 @@
                     <img src="logo.png" alt="Kristín Bára" class="footer-logo">
                 </div>
                 <nav class="footer-nav" aria-label="Flýtileiðir">
-                    <h4 class="footer-heading">Flýtileiðir</h4>
+                    <h4 class="footer-heading script-accent">Flýtileiðir</h4>
                     <ul class="footer-list">
                         <li><a href="#hero">Heim</a></li>
                         <li><a href="#yoga-nidra">Inngangur</a></li>
@@ -313,15 +455,27 @@
                         <li><a href="#skraning">Skráning</a></li>
                     </ul>
                 </nav>
-                <div class="footer-social">
-                    <h4 class="footer-heading">Tengjast</h4>
-                    <div class="social-links" id="social-links"></div>
-                    <p class="footer-credit">made by <a href="https://www.vefstaedid.is" class="footer-link" target="_blank" rel="noopener">www.vefstaedid.is</a></p>
+                <div class="footer-connect">
+                    <div class="footer-newsletter">
+                        <h4 class="footer-heading script-accent">Póstlisti</h4>
+                        <p class="footer-newsletter-text">Fáðu leiðbeiningar og efni beint í pósthólfið</p>
+                        <form id="footer-newsletter-form" class="footer-newsletter-form">
+                            <div class="footer-input-group">
+                                <input type="email" id="footer-email" name="email" placeholder="Netfang þitt" required class="footer-newsletter-input">
+                                <button type="submit" class="btn btn-secondary footer-newsletter-btn">Skrá</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="footer-social">
+                        <h4 class="footer-heading script-accent">Tengjast</h4>
+                        <div class="social-links" id="social-links"></div>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p class="copyright">&copy; <span id="current-year">2025</span> Kristín Bára — Allur réttur áskilinn.</p>
                 <div class="footer-links">
+                    <p class="footer-credit">made by <a href="https://www.vefstaedid.is" class="footer-link" target="_blank" rel="noopener">www.vefstaedid.is</a></p>
                     <a href="#" class="footer-link">Privacy</a>
                     <a href="#" class="footer-link">Terms</a>
                 </div>
@@ -379,6 +533,8 @@
             <li><a href="#um-kristinu" class="side-nav-link" data-target="#um-kristinu">Um Kristínu</a></li>
             <li><a href="#yoga-nidra-program" class="side-nav-link" data-target="#yoga-nidra-program">Yoga Nidra</a></li>
             <li><a href="#samtalsmedferd" class="side-nav-link" data-target="#samtalsmedferd">Samtalsmeðferð</a></li>
+            <li><a href="#compassionate-inquiry" class="side-nav-link" data-target="#compassionate-inquiry">Compassionate Inquiry</a></li>
+            <li><a href="#tonheilun" class="side-nav-link" data-target="#tonheilun">Tónheilun</a></li>
             <li><a href="#timar" class="side-nav-link" data-target="#timar">Tímar</a></li>
             <li><a href="#efni" class="side-nav-link" data-target="#efni">Efni</a></li>
             <li><a href="#skraning" class="side-nav-link" data-target="#skraning">Skráning</a></li>

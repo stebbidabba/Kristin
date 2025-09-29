@@ -368,12 +368,13 @@ const posts = [
     // Header scroll effect
     // Header scroll effect disabled since header is non-sticky now
   
-    // Side nav visibility after hero
+    // Side nav visibility after hero (only on landing page)
     const sideNav = document.getElementById('side-nav');
     const hero = document.getElementById('hero');
     const sectionLinks = document.querySelectorAll('.side-nav-link');
+    const isLandingPage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') || window.location.pathname === '';
 
-    if (sideNav && hero) {
+    if (sideNav && hero && isLandingPage) {
       const toggleSideNav = () => {
         const threshold = hero.offsetHeight - 80; // show after leaving hero mostly
         if (window.scrollY > threshold) {
@@ -384,32 +385,39 @@ const posts = [
       };
       window.addEventListener('scroll', toggleSideNav);
       toggleSideNav();
+    } else if (sideNav && !isLandingPage) {
+      // On efni page, always show the side nav
+      sideNav.classList.add('visible');
     }
 
-    // Scrollspy using IntersectionObserver
-    const sections = [
-      '#yoga-nidra',
-      '#um-kristinu',
-      '#yoga-nidra-program',
-      '#samtalsmedferd',
-      '#timar',
-      '#efni',
-      '#skraning'
-    ].map(sel => document.querySelector(sel)).filter(Boolean);
+    // Scrollspy using IntersectionObserver (only on landing page)
+    if (isLandingPage) {
+      const sections = [
+        '#yoga-nidra',
+        '#um-kristinu',
+        '#yoga-nidra-program',
+        '#samtalsmedferd',
+        '#compassionate-inquiry',
+        '#tonheilun',
+        '#timar',
+        '#efni',
+        '#skraning'
+      ].map(sel => document.querySelector(sel)).filter(Boolean);
 
-    if (sections.length && 'IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = `#${entry.target.id}`;
-            document.querySelectorAll('.side-nav-link').forEach(a => {
-              a.classList.toggle('active', a.getAttribute('href') === id);
-            });
-          }
-        });
-      }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+      if (sections.length && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = `#${entry.target.id}`;
+              document.querySelectorAll('.side-nav-link').forEach(a => {
+                a.classList.toggle('active', a.getAttribute('href') === id);
+              });
+            }
+          });
+        }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
-      sections.forEach(section => observer.observe(section));
+        sections.forEach(section => observer.observe(section));
+      }
     }
 
     // Smooth scroll for side nav links (respect reduced motion)
@@ -417,6 +425,12 @@ const posts = [
       const link = e.target.closest('.side-nav-link');
       if (!link) return;
       const href = link.getAttribute('href');
+      
+      // If it's a link to another page, let it navigate normally
+      if (href.includes('index.html') || href.includes('efni.html')) {
+        return; // Allow normal navigation
+      }
+      
       const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
@@ -435,6 +449,34 @@ const posts = [
         const klass = document.getElementById('signup-class').value;
         const subject = encodeURIComponent(`Skráning: ${klass}`);
         const body = encodeURIComponent(`Nafn: ${name}\nNetfang: ${email}\nNámskeið: ${klass}`);
+        window.location.href = `mailto:bryndisardottir@gmail.com?subject=${subject}&body=${body}`;
+      });
+    }
+
+    // Newsletter signup handlers
+    // Removed hero newsletter form (kept band + footer forms only)
+
+    const footerNewsletterForm = document.getElementById('footer-newsletter-form');
+    if (footerNewsletterForm) {
+      footerNewsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('footer-email').value.trim();
+        const subject = encodeURIComponent('Skráning á póstlista');
+        const body = encodeURIComponent(`Ég vil skrá mig á póstlista.\n\nNetfang: ${email}\n\nTakk fyrir!`);
+        window.location.href = `mailto:bryndisardottir@gmail.com?subject=${subject}&body=${body}`;
+      });
+    }
+
+    // Newsletter band form
+    const bandForm = document.getElementById('band-newsletter-form');
+    if (bandForm) {
+      bandForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const first = (document.getElementById('band-first')?.value || '').trim();
+        const last = (document.getElementById('band-last')?.value || '').trim();
+        const email = (document.getElementById('band-email')?.value || '').trim();
+        const subject = encodeURIComponent('Póstlisti — ný skráning');
+        const body = encodeURIComponent(`Fornafn: ${first}\nEftirnafn: ${last}\nNetfang: ${email}`);
         window.location.href = `mailto:bryndisardottir@gmail.com?subject=${subject}&body=${body}`;
       });
     }

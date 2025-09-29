@@ -1,0 +1,137 @@
+{
+    "project": "Opening Page — Hero Redesign",
+    "scope": ["header", "hero"],
+  
+    "tech": { "stack": ["html", "css", "js"], "frameworks": false },
+  
+    "a11y": {
+      "wcag": "AA",
+      "prefersReducedMotion": true,
+      "focusVisible": true,
+      "contrastMin": 4.5,
+      "skipToContent": true
+    },
+  
+    "brand": {
+      "name": "Kristín Bára",
+      "fonts": {
+        "heading": "Cormorant Garamond",
+        "body": "Inter",
+        "load": "google"
+      },
+      "palette": {
+        "bg": ["#FFFFFF", "#F8FAFB"],
+        "neutrals": { "100": "#F2F4F5", "200": "#E6E9EB", "300": "#DDE2E6" },
+        "text": { "primary": "#1F2937", "secondary": "#4B5563", "onImage": "#FFFFFF" },
+        "accent": "#8EA7A9",
+        "hairline": "rgba(31,41,55,0.08)",
+        "shadow": "0 8px 28px rgba(31,41,55,0.10)"
+      }
+    },
+  
+    "layout": {
+      "maxWidth": 1100,
+      "header": { "sticky": true, "height": 72, "blur": true, "hairline": true, "containerPadding": { "mobile": 16, "desktop": 24 } },
+      "hero": {
+        "minHeightVh": 92,
+        "imageSrc": "/assets/hero.jpg",
+        "overlay": { "from": "rgba(0,0,0,0.30)", "to": "rgba(0,0,0,0.55)" },
+        "contentAlign": "center",
+        "contentMax": 760,
+        "paddingY": { "mobile": 96, "desktop": 140 }
+      },
+      "radius": "1.25rem",
+      "transitionMs": 220
+    },
+  
+    "navigation": {
+      "logoText": "Kristín Bára",
+      "items": [
+        { "label": "Hvað er Yoga Nidra?", "href": "#nidra" },
+        { "label": "Um Kristínu", "href": "#um" },
+        { "label": "Samtalsmeðferð", "href": "#samtal" },
+        { "label": "Tímar", "href": "#timar" },
+        { "label": "Efni", "href": "#efni" },
+        { "label": "Verslun", "href": "#verslun" }
+      ],
+      "cta": { "label": "Hafa samband", "href": "mailto:bryndisardottir@gmail.com", "external": true },
+      "style": {
+        "links": {
+          "case": "none",
+          "weight": 500,
+          "tracking": 0.2,
+          "color": "rgba(255,255,255,0.92)",
+          "hoverColor": "#FFFFFF"
+        },
+        "buttons": {
+          "variant": "ghost",
+          "bg": "transparent",
+          "text": "rgba(255,255,255,0.92)",
+          "border": "rgba(255,255,255,0.22)",
+          "hoverBg": "rgba(255,255,255,0.06)",
+          "hoverBorder": "rgba(255,255,255,0.32)",
+          "focusRing": "0 0 0 3px rgba(142,167,169,0.35)",
+          "padding": { "y": 10, "x": 16 },
+          "radius": "9999px"
+        },
+        "bar": {
+          "bg": "rgba(255,255,255,0.02)",
+          "backdropFilter": "saturate(140%) blur(12px)",
+          "hairlineColor": "rgba(255,255,255,0.14)",
+          "hairlinePosition": "bottom"
+        }
+      }
+    },
+  
+    "heroContent": {
+      "title": "Djúp kyrrð. Vöknuð vitund.",
+      "subtitle": "Leidd Yoga Nidra, hugleiðsla og tónheilun með Kristínu Báru.",
+      "microcopy": "Vikulegir tímar í Yoga Shala & í Sólum.",
+      "typography": {
+        "title": { "size": { "mobile": 40, "desktop": 64 }, "weight": 600, "lineHeight": 1.1, "color": "#FFFFFF" },
+        "subtitle": { "size": { "mobile": 18, "desktop": 20 }, "weight": 400, "lineHeight": 1.6, "color": "rgba(255,255,255,0.92)" },
+        "microcopy": { "size": 14, "weight": 400, "color": "rgba(255,255,255,0.75)", "uppercase": false, "letterSpacing": 0.3 }
+      },
+      "ctas": {
+        "primary": { "label": "Bóka tíma", "href": "mailto:bryndisardottir@gmail.com", "external": true, "variant": "outline-light" },
+        "secondary": { "label": "Læra meira", "href": "#nidra", "variant": "text-light" },
+        "style": {
+          "primary": {
+            "text": "#FFFFFF",
+            "border": "rgba(255,255,255,0.55)",
+            "bg": "transparent",
+            "hoverBg": "rgba(255,255,255,0.10)",
+            "hoverBorder": "#FFFFFF",
+            "radius": "9999px",
+            "padding": { "y": 12, "x": 20 }
+          },
+          "secondary": {
+            "text": "rgba(255,255,255,0.92)",
+            "hoverText": "#FFFFFF",
+            "underline": false,
+            "padding": { "y": 12, "x": 12 }
+          },
+          "gap": 12
+        }
+      }
+    },
+  
+    "typeScale": {
+      "h1": { "mobile": 40, "desktop": 64, "weight": 600 },
+      "h2": { "mobile": 28, "desktop": 40, "weight": 600 },
+      "body": { "mobile": 16, "desktop": 18, "weight": 400 }
+    },
+  
+    "motion": {
+      "durationMs": 220,
+      "easing": "cubic-bezier(.2,.6,.2,1)",
+      "respectReduced": true,
+      "hoverTransition": true
+    },
+  
+    "performance": {
+      "image": { "priorityHero": true, "sizes": "(min-width: 1100px) 1100px, 100vw", "format": "auto" },
+      "fontDisplay": "swap"
+    }
+  }
+  
