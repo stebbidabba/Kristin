@@ -517,6 +517,30 @@ const posts = [
     }
   }
   
+  // Back to top button functionality
+  function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    if (!backToTopBtn) return;
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+    
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+  
   // ===== START APPLICATION =====
   
   // Wait for DOM to be fully loaded
@@ -524,8 +548,10 @@ const posts = [
     document.addEventListener('DOMContentLoaded', () => {
       init();
       initMobileMenu();
+      initBackToTop();
     });
   } else {
     init();
     initMobileMenu();
+    initBackToTop();
   }
